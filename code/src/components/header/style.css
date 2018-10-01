@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 header {
   background: #FFDFE7;
 }
@@ -8,8 +11,65 @@ header a {
   text-decoration: none;
   padding: 10px;
 }
-
+header a:hover {
+  color: #BB1407;
+}
 .header-grid {
   display: flex;
   justify-content: space-between;
+}
+#hamburger-checkbox {
+  display: none;
+}
+#hamburger-checkbox:checked + .header-grid{
+  display: block;
+}
+.hamburger {
+  display: none;
+  padding: 6px 65px;
+  z-index: 10;
+  width: 100%;
+  background: #FFDFE7;
+}
+.hamburger-bar {
+  width: 24px;
+  height: 4px;
+  background-color: #FE3525;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+
+/* CSS effect that turns hamburger into cross */
+.transform #bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+.transform #bar2 {
+  opacity: 0;}
+
+.transform #bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -6px);
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+@media (max-width: 900px) {
+  .header-grid {
+    width: 100%;
+    background: #FFDFE7;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+  }
+  header a {
+    font-size: 14.5px;
+    margin-left: 35px;
+    padding-bottom: 3px;
+    width: 100%;
+    display: flex;
+
+  }
+  .hamburger {
+    display: block;
+  }
 }
