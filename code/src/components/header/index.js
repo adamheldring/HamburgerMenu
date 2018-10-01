@@ -11,7 +11,6 @@ class Header extends React.Component {
       document.getElementById('hamburgerIcon').classList.toggle('transform')
     }
 
-
     return (
       <header>
         <label for="hamburger-checkbox" id="hamburger-label">

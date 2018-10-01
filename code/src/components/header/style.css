@@ -4,7 +4,6 @@
 header {
   background: #FFDFE7;
 }
-
 header a {
   color: #FE3525;
   font-family: BigJohn;
@@ -22,12 +21,6 @@ header a:hover {
 }
 #hamburger-checkbox {
   display: none;
-}
-#hamburger-checkbox:checked + .header-grid{
-  /* display: block; */
-  position: absolute;
-  top: 40px;
-  transition: top 0.2s ease;
 }
 .hamburger {
   display: none;
@@ -58,11 +51,6 @@ header a:hover {
     transform: rotate(45deg) translate(-6px, -6px);
 }
 
-@media (min-width: 901px) {
-  #hamburger-checkbox:checked + .header-grid{
-    position: static;
-  }
-}
 @media (max-width: 900px) {
   .header-grid {
     width: 100%;
@@ -80,5 +68,10 @@ header a:hover {
   }
   .hamburger {
     display: block;
+  }
+  #hamburger-checkbox:checked + .header-grid{
+    position: absolute;
+    top: 40px;
+    transition: top 0.2s ease;
   }
 }
