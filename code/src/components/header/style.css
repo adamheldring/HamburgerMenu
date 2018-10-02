@@ -28,6 +28,7 @@ header a:hover {
   z-index: 10;
   width: 100%;
   background: #FFDFE7;
+  outline: none;
 }
 .hamburger-bar {
   width: 24px;
