@@ -4,15 +4,27 @@ import Grid from "lib/grid"
 import "./style.css"
 
 class Header extends React.Component {
-  render() {
-    const toggleIcon = () => {
-      document.getElementById("hamburgerIcon").classList.toggle("transform")
-    }
+  state = {
+    active: false
+  }
 
+  toggleIcon = () => {
+    this.setState({
+      active: !this.state.active
+    })
+  }
+
+  render() {
     return (
       <header>
         <label htmlFor="hamburger-checkbox" id="hamburger-label">
-          <div role="button" tabIndex={0} className="hamburger" id="hamburgerIcon" onClick={toggleIcon} onKeyPress={toggleIcon}>
+          <div
+            className={this.state.active ? "hamburger transform" : "hamburger"}
+            role="button"
+            tabIndex={0}
+            id="hamburgerIcon"
+            onClick={this.toggleIcon}
+            onKeyPress={this.toggleIcon}>
             <div className="hamburger-bar" id="bar1" />
             <div className="hamburger-bar" id="bar2" />
             <div className="hamburger-bar" id="bar3" />
